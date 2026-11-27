@@ -1,0 +1,9 @@
+{
+  "bundle": {
+    "targets": ["nsis"],
+    "externalBin": ["binaries/ffmpeg"],
+    "windows": {
+      "nsis": { "installMode": "currentUser" }
+    }
+  }
+}
