@@ -1,15 +1,14 @@
-name: Desktop app
+name: Release
 
 # Builds the Windows installer and the Linux .deb, then publishes them as the GitHub release for the
-# app version in desktop/src-tauri/tauri.conf.json (e.g. v0.1.0). Rebuilding the same version replaces
+# app version in src-tauri/tauri.conf.json (e.g. v0.1.0). Rebuilding the same version replaces
 # that release's files; bump the version to publish a new release.
 on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths:
-      - "desktop/**"
-      - ".github/workflows/desktop.yml"
+    paths-ignore:
+      - "**.md"
 
 concurrency:
   group: desktop-release
@@ -26,14 +25,11 @@ jobs:
         include:
           - os: windows-latest
             artifact: windows-installer
-            files: desktop/src-tauri/target/release/bundle/nsis/*.exe
+            files: src-tauri/target/release/bundle/nsis/*.exe
           - os: ubuntu-22.04
             artifact: linux-deb
-            files: desktop/src-tauri/target/release/bundle/deb/*.deb
+            files: src-tauri/target/release/bundle/deb/*.deb
     runs-on: ${{ matrix.os }}
-    defaults:
-      run:
-        working-directory: desktop
     steps:
       - uses: actions/checkout@v4
 
@@ -45,7 +41,7 @@ jobs:
 
       - uses: swatinem/rust-cache@v2
         with:
-          workspaces: desktop/src-tauri
+          workspaces: src-tauri
 
       - name: Install Linux build dependencies
         if: runner.os == 'Linux'
@@ -83,7 +79,7 @@ jobs:
 
       - name: Read app version
         id: version
-        run: echo "version=$(jq -r .version desktop/src-tauri/tauri.conf.json)" >> "$GITHUB_OUTPUT"
+        run: echo "version=$(jq -r .version src-tauri/tauri.conf.json)" >> "$GITHUB_OUTPUT"
 
       - uses: actions/download-artifact@v4
         with:
