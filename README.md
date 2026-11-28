@@ -13,6 +13,9 @@
   <a href="../../releases/latest"><strong>⬇ Download for Windows / Linux</strong></a>
 </p>
 
+<!-- DEMO VIDEO: drag demo.mp4 onto the blank line below in GitHub's editor, then delete this comment. -->
+
+
 ---
 
 Discord rejects files over its size limit, so a gameplay clip usually needs to be cut down and re-encoded before you can share it. Discord Ready Clip does both steps. Open a recording from NVIDIA ShadowPlay, OBS replay buffer, AMD ReLive, Xbox Game Bar or anything else, pick the moment, and export an MP4 that is just under the limit you choose. Because it targets the limit, you get the best quality that will still upload.
