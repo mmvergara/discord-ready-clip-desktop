@@ -13,12 +13,7 @@
   <a href="../../releases/latest"><strong>⬇ Download for Windows / Linux</strong></a>
 </p>
 
-
-
-https://github.com/user-attachments/assets/6a124c8e-738a-4bdb-abd5-ab57bd0aa448
-
-
-
+https://github.com/user-attachments/assets/74da189e-8a07-45e9-a0c3-fddb51c1bf24
 
 ---
 
