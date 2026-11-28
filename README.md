@@ -13,7 +13,11 @@
   <a href="../../releases/latest"><strong>⬇ Download for Windows / Linux</strong></a>
 </p>
 
-<!-- DEMO VIDEO: drag demo.mp4 onto the blank line below in GitHub's editor, then delete this comment. -->
+
+
+https://github.com/user-attachments/assets/6a124c8e-738a-4bdb-abd5-ab57bd0aa448
+
+
 
 
 ---
